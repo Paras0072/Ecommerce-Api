@@ -1,0 +1,18 @@
+{
+  "name": "ecommerce-api",
+  "version": "1.0.0",
+  "description": "Ecommerce Api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paras Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.1.0"
+  }
+}
