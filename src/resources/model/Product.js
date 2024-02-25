@@ -4,7 +4,6 @@ const { sequelize } = require("../../config/connect");
 module.exports.Product = sequelize.define(
   "Product",
   {
-    
     title: { type: DataTypes.STRING, allowNull: false, unique: true },
     description: { type: DataTypes.STRING, allowNull: false },
     price: {
@@ -13,8 +12,11 @@ module.exports.Product = sequelize.define(
       validate: { min: 0, max: 10000 },
     },
     stock: { type: DataTypes.INTEGER, defaultValue: 0, validate: { min: 0 } },
-    category: { type: DataTypes.STRING, allowNull: false },
-    deleted: { type: DataTypes.BOOLEAN, defaultValue: false },
+    CategoryId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: { model: "Categories", key: "id" },
+    },
   },
   { timestamps: true }
 );
@@ -36,3 +38,4 @@ module.exports.Product = sequelize.define(
    // sizes: { type: DataTypes.JSONB },
    // highlights: { type: DataTypes.ARRAY(DataTypes.STRING) },
    // discountPrice: { type: DataTypes.FLOAT },
+     // deleted: { type: DataTypes.BOOLEAN, defaultValue: false },
