@@ -38,23 +38,27 @@ Configure your PostgreSQL database settings in config/config.js.
 ##  Endpoints
 The API provides the following endpoints:
 
-Products
+# Products
 
 GET /products/:categoryId : Get a list of all products of specific category.
 GET /products/:productId: Get details of a specific product.
 
-Categories
+# Categories
 GET /categories: Get a list of all categories.
 
-Cart
+# Cart
 
-POST  /cart/:userId/:productId : For adding product into cart
-Get   /cart/viewcart/:userId   : For viewing the cart
-Patch  /cart/updatequantity/:userId/:productId  : For updating the cart
+POST    /cart/:userId/:productId : For adding product into cart
+Get     /cart/viewcart/:userId   : For viewing the cart
+Patch   /cart/updatequantity/:userId/:productId  : For updating the cart
 Delete  /cart/removefromcart/:userId/:productId' : For removing from cart
  
 
-Order
+# Order
+
+POST   /:userId" : For placing the order
+GET    /orderhistory/:userId" : For getting Order history
+GEt    /orderdetails/:orderId" : For getting Order Details
 
 POST /api/orders/place-order: Place an order.
 
