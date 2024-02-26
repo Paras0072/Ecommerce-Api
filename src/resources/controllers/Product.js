@@ -1,4 +1,4 @@
-const models = require("../model/index");
+const {models} = require("../model/index");
 
 exports.fetchProductsByCategory = async (req, res) => {
   const { categoryId } = req.params;
@@ -8,7 +8,8 @@ exports.fetchProductsByCategory = async (req, res) => {
       attributes: ["title", "price", "description", "stock"],
     });
     // Fetch the category label using a separate query
-    const category = await models.Category.findByPk({category:categoryId}, {
+    const category = await models.Category.findOne({
+      where: { id: categoryId },
       attributes: ["label"],
     });
     if (!category) {

@@ -1,4 +1,4 @@
-const models = require("../model/index");
+const {models} = require("../model/index");
 
 exports.addtocart = async (req, res) => {
   const { userId, productId } = req.params;

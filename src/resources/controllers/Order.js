@@ -1,4 +1,4 @@
-const models = require("../model/index");
+const {models} = require("../model/index");
 
 exports.placeOrder = async (req, res) => {
   const { userId } = req.params;

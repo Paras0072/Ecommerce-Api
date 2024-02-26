@@ -1,4 +1,4 @@
-const models = require("../model/index");
+const {models} = require("../model/index");
 
 exports.fetchCategories = async (req, res) => {
   try {
