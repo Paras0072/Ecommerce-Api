@@ -1,9 +1,9 @@
-const { Category } = require("../model/Category");
+const models = require("../model/index");
 
 exports.fetchCategories = async (req, res) => {
   try {
-    const categories = await Category.findAll({
-      attributes: ["id", "label","value"],
+    const categories = await models.Category.findAll({
+      attributes: ["id", "label", "value"],
     });
     res.status(200).json(categories);
   } catch (err) {
