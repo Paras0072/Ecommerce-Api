@@ -27,8 +27,6 @@ Make sure you have the following installed before running the API:
    git clone https://github.com/your-username/e-commerce-api.git
 Install dependencies:
 
-copy code
-cd e-commerce-api
 npm install
 
 ### Configuration
@@ -40,18 +38,19 @@ The API provides the following endpoints:
 
 # Products
 
-GET /products/:categoryId : Get a list of all products of specific category.
+GET /products/:categoryId  : Get a list of all products of specific category.
 
-GET /products/:productId: Get details of a specific product.
+GET /products/:productId   : Get details of a specific product.
 
 # Categories
+
 GET /categories: Get a list of all categories.
 
 # Cart
 
-POST    /cart/:userId/:productId : For adding product into cart
+POST    /cart/:userId/:productId                 : For adding product into cart
 
-Get     /cart/viewcart/:userId   : For viewing the cart
+Get     /cart/viewcart/:userId                   : For viewing the cart
 
 Patch   /cart/updatequantity/:userId/:productId  : For updating the cart
 
@@ -60,13 +59,13 @@ Delete  /cart/removefromcart/:userId/:productId' : For removing from cart
 
 # Order
 
-POST   /:userId" : For placing the order
+POST   /:userId"                   : For placing the order
 
-GET    /orderhistory/:userId" : For getting Order history
+GET    /orderhistory/:userId"      : For getting Order history
 
-GEt    /orderdetails/:orderId" : For getting Order Details
+GET    /orderdetails/:orderId"     : For getting Order Details
 
-POST /api/orders/place-order: Place an order.
+
 
 ## Authentication
 Authentication is required for certain endpoints. Use your preferred authentication method (JWT, OAuth, etc.) and secure sensitive endpoints.
