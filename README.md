@@ -30,11 +30,12 @@ Install dependencies:
 copy code
 cd e-commerce-api
 npm install
-Configuration
+
+### Configuration
 Configure your PostgreSQL database settings in config/config.js.
 
-Usage
-Endpoints
+### Usage
+##  Endpoints
 The API provides the following endpoints:
 
 Products
@@ -56,10 +57,11 @@ Delete  /cart/removefromcart/:userId/:productId' : For removing from cart
 Order
 
 POST /api/orders/place-order: Place an order.
-Authentication
+
+## Authentication
 Authentication is required for certain endpoints. Use your preferred authentication method (JWT, OAuth, etc.) and secure sensitive endpoints.
 
-Models
+### Models
 The API uses the following Sequelize models:
 
 User
@@ -70,13 +72,9 @@ Order
 OrderProducts
 Ensure to check the models and associations for database structure details.
 
-Contributing
+### Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-License
+### License
 This project is licensed under the MIT License.
-
-arduino
-Copy code
-
 This README provides a starting point for users and contributors to understand the project 
