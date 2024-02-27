@@ -2,7 +2,7 @@ const express = require("express");
 const authenticate = require("../../authorization/authenticate");
 
 const router = express.Router();
-
+// router for testing authentication
 router.get("/secure", authenticate, (req, res) => {
    const authToken = req.headers["x-auth-token"];
     res.json({

@@ -1,5 +1,7 @@
 "use strict";
 const { DataTypes } = require("sequelize");
+
+// model for order
 module.exports = (sequelize) => {
   const Orders = sequelize.define(
     "Order",
@@ -28,31 +30,7 @@ module.exports = (sequelize) => {
   return Orders;
 };
 
-// const { DataTypes } = require("sequelize");
-// const { sequelize } = require("../../config/connect");
-// module.exports = (sequelize) => {
-//   const Order = sequelize.define(
-//     "Order",
-//     {
-//       items: { type: DataTypes.ARRAY(DataTypes.JSONB), allowNull: false },
-//       totalAmount: { type: DataTypes.FLOAT },
-//       totalItems: { type: DataTypes.INTEGER },
-//       userId: {
-//         type: DataTypes.INTEGER,
-//         //references: { model: "Users", key: "id" },
-//         allowNull: false,
-//       },
-//       status: { type: DataTypes.STRING, defaultValue: "pending" },
-//       selectedAddress: { type: DataTypes.JSONB, allowNull: false },
-//     },
-//     { timestamps: true, tableName: "Orders" }
-//   );
-//    Order.associate = (models) => {
-//      Order.belongsTo(models.User, { foreignKey: "userId" });
-//    };
 
-//   return Order;
-// }
 
 // // <------More features to add in future----->
 //  // paymentMethod: {

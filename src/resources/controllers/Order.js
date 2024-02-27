@@ -1,5 +1,6 @@
 const {models} = require("../model/index");
 
+// function for placing the order from cart
 exports.placeOrder = async (req, res) => {
   const { userId } = req.params;
 
@@ -39,6 +40,8 @@ exports.placeOrder = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// function for finding the oerder history of user
 exports.orderHistory = async (req, res) => {
   const { userId } = req.params;
 
@@ -64,6 +67,8 @@ exports.orderHistory = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// function for finding the order details
 exports.orderDetails = async (req, res) => {
   const { orderId } = req.params;
 

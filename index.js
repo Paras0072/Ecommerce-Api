@@ -9,7 +9,7 @@ const cartRoutes=require("./src/resources/routes/Cart");
 const orderRoutes = require("./src/resources/routes/Order");
 //middlewares
 server.use(express.json()); // to parse req.body
-connection();
+connection(); // for connecting the database
 server.use("/categories", categoriesRouters.router);
 server.use('/products',productsRouters.router);
 server.use("/auth",authRoutes.router);

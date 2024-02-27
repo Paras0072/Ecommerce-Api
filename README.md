@@ -30,7 +30,7 @@ Install dependencies:
 npm install
 
 ### Configuration
-Configure your PostgreSQL database settings in config/config.js.
+Configure your PostgreSQL database settings in models/index.js
 
 ### Usage
 ##  Endpoints
@@ -38,9 +38,9 @@ The API provides the following endpoints:
 
 # Products
 
-GET /products/:categoryId  : Get a list of all products of specific category.
+GET /products/:categoryId            : Get a list of all products of specific category.
 
-GET /products/:productId   : Get details of a specific product.
+GET /products/fetchbyid/:productId   : Get details of a specific product.
 
 # Categories
 
@@ -59,11 +59,11 @@ Delete  /cart/removefromcart/:userId/:productId' : For removing from cart
 
 # Order
 
-POST   /:userId"                   : For placing the order
+POST   /order/:userId"                   : For placing the order
 
-GET    /orderhistory/:userId"      : For getting Order history
+GET    /order/orderhistory/:userId"      : For getting Order history
 
-GET    /orderdetails/:orderId"     : For getting Order Details
+GET    /order/orderdetails/:orderId"     : For getting Order Details
 
 
 

@@ -1,3 +1,5 @@
+// for sequelize the models 
+
 const Sequelize = require("sequelize");
 const UserModel = require("./User");
 const CategoryModel = require("./Category");
@@ -9,6 +11,8 @@ require("dotenv").config();
 const database = process.env.POSTGRE_DATABASE;
 const username = process.env.POSTGRE_USERNAME;
 const password = process.env.POSTGRE_PASSWORD;
+
+// information of the database
 const sequelize = new Sequelize(database, username, password, {
   host: "localhost",
   dialect: "postgres",
@@ -36,6 +40,8 @@ Object.keys(models).forEach((key) => {
 
 models.sequelize = sequelize;
 models.Sequelize = Sequelize;
+
+//function for connecting the database
 const connection = async () => {
   try {
     await sequelize.authenticate();

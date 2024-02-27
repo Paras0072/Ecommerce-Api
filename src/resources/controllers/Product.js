@@ -1,5 +1,7 @@
-const {models} = require("../model/index");
+const { models } = require("../model/index");
 
+
+// function for fetching product by specific category
 exports.fetchProductsByCategory = async (req, res) => {
   const { categoryId } = req.params;
   try {
@@ -24,18 +26,20 @@ exports.fetchProductsByCategory = async (req, res) => {
     };
 
     res.json(result);
-    //  res.json(products);
+    
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
 
+// function for finding the specific product
 exports.fetchProductsById = async (req, res) => {
   try {
     const productId = req.params.productId;
-
+    
     // Find the product by ID
-    const product = await models.Product.findByPk({product:productId}, {
+    const product = await models.Product.findOne({
+      where: { id: productId },
       attributes: ["title", "price", "description", "stock"],
     });
 

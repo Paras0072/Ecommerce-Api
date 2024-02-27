@@ -6,6 +6,6 @@ const { fetchProductsByCategory, fetchProductsById } = require('../controllers/P
 const router =express.Router();
 
 router.get("/:categoryId", fetchProductsByCategory);
-router.get("/:productId",fetchProductsById);
+router.get("/findbyid/:productId",fetchProductsById);
 
 exports.router=router;
