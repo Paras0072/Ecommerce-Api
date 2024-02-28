@@ -69,7 +69,9 @@ GET    /order/orderdetails/:orderId"     : For getting Order Details
 
 ## Authentication
 Authentication is required for certain endpoints. Use your preferred authentication method (JWT, OAuth, etc.) and secure sensitive endpoints.
-
+After login a token get generated put that token into the header section of request as 
+key  :x-auth-token 
+value:generated token value
 ### Models
 The API uses the following Sequelize models:
 

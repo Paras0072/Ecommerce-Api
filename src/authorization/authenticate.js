@@ -1,11 +1,11 @@
 const jwt = require("jsonwebtoken");
 // function for getting token
+require("dotenv").config();
 function authenticate(req, res, next) {
-  const authToken = req.headers["x-auth-token"];
-   const token = req.header('x-auth-token');
+   const token = req.headers["x-auth-token"];
    console.log(token)
   if (!token) {
-    return res.status(401).json({ error: "Unauthorized - Missing token" });
+    return res.status(401).json({ error: "Unauthorized - Missing token( Add the key : x-auth-token  value: generated token from login  in headers of request then Try Again!!" });
   }
 
   try {
